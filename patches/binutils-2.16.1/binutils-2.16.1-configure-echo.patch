@@ -1,0 +1,130 @@
+diff -urNp binutils-2.16.1/bfd/configure binutils-2.16.1.new/bfd/configure
+--- binutils-2.16.1/bfd/configure	2005-06-12 21:58:46.000000000 +0300
++++ binutils-2.16.1.new/bfd/configure	2017-07-07 22:03:11.811521752 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp binutils-2.16.1/gas/configure binutils-2.16.1.new/gas/configure
+--- binutils-2.16.1/gas/configure	2005-03-01 02:43:51.000000000 +0200
++++ binutils-2.16.1.new/gas/configure	2017-07-07 22:03:45.200521752 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp binutils-2.16.1/gprof/configure binutils-2.16.1.new/gprof/configure
+--- binutils-2.16.1/gprof/configure	2005-01-31 22:32:41.000000000 +0200
++++ binutils-2.16.1.new/gprof/configure	2017-07-07 22:03:38.170521752 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp binutils-2.16.1/libiberty/configure binutils-2.16.1.new/libiberty/configure
+--- binutils-2.16.1/libiberty/configure	2005-03-06 20:48:16.000000000 +0200
++++ binutils-2.16.1.new/libiberty/configure	2017-07-07 21:59:16.619870721 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp binutils-2.16.1/opcodes/configure binutils-2.16.1.new/opcodes/configure
+--- binutils-2.16.1/opcodes/configure	2005-01-31 22:30:37.000000000 +0200
++++ binutils-2.16.1.new/opcodes/configure	2017-07-07 22:03:21.559521752 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
