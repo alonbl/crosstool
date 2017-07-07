@@ -1,0 +1,11 @@
+--- gcc-3.3.6/gcc/collect2.c.org	2017-07-07 15:58:28.353706544 +0300
++++ gcc-3.3.6/gcc/collect2.c	2017-07-07 15:58:35.205963485 +0300
+@@ -1572,7 +1572,7 @@ collect_execute (prog, argv, redir)
+   if (redir)
+     {
+       /* Open response file.  */
+-      redir_handle = open (redir, O_WRONLY | O_TRUNC | O_CREAT);
++      redir_handle = open (redir, O_WRONLY | O_TRUNC | O_CREAT, 0777);
+ 
+       /* Duplicate the stdout and stderr file handles
+ 	 so they can be restored later.  */

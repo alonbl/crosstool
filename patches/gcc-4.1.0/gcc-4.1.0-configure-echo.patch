@@ -1,0 +1,495 @@
+diff -urNp gcc-4.1.0.org/boehm-gc/configure gcc-4.1.0/boehm-gc/configure
+--- gcc-4.1.0.org/boehm-gc/configure	2006-02-28 10:39:11.000000000 +0200
++++ gcc-4.1.0/boehm-gc/configure	2017-07-07 21:53:16.736986776 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/fastjar/configure gcc-4.1.0/fastjar/configure
+--- gcc-4.1.0.org/fastjar/configure	2005-05-18 04:38:46.000000000 +0300
++++ gcc-4.1.0/fastjar/configure	2017-07-07 21:53:07.820025171 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/fixincludes/configure gcc-4.1.0/fixincludes/configure
+--- gcc-4.1.0.org/fixincludes/configure	2005-07-16 17:17:51.000000000 +0300
++++ gcc-4.1.0/fixincludes/configure	2017-07-07 21:54:48.212011750 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/gcc/configure gcc-4.1.0/gcc/configure
+--- gcc-4.1.0.org/gcc/configure	2006-02-14 18:50:45.000000000 +0200
++++ gcc-4.1.0/gcc/configure	2017-07-07 21:54:56.691011750 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/gnattools/configure gcc-4.1.0/gnattools/configure
+--- gcc-4.1.0.org/gnattools/configure	2005-02-26 23:43:33.000000000 +0200
++++ gcc-4.1.0/gnattools/configure	2017-07-07 21:55:01.163011750 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/intl/configure gcc-4.1.0/intl/configure
+--- gcc-4.1.0.org/intl/configure	2006-02-28 10:39:10.000000000 +0200
++++ gcc-4.1.0/intl/configure	2017-07-07 21:55:05.321011750 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/libada/configure gcc-4.1.0/libada/configure
+--- gcc-4.1.0.org/libada/configure	2005-02-26 23:43:33.000000000 +0200
++++ gcc-4.1.0/libada/configure	2017-07-07 21:53:00.333026064 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/libcpp/configure gcc-4.1.0/libcpp/configure
+--- gcc-4.1.0.org/libcpp/configure	2006-02-28 10:39:11.000000000 +0200
++++ gcc-4.1.0/libcpp/configure	2017-07-07 21:54:26.374011750 +0300
+@@ -186,11 +186,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/libffi/configure gcc-4.1.0/libffi/configure
+--- gcc-4.1.0.org/libffi/configure	2006-02-28 10:39:11.000000000 +0200
++++ gcc-4.1.0/libffi/configure	2017-07-07 21:54:36.129011750 +0300
+@@ -186,11 +186,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/libgfortran/configure gcc-4.1.0/libgfortran/configure
+--- gcc-4.1.0.org/libgfortran/configure	2006-02-28 10:39:11.000000000 +0200
++++ gcc-4.1.0/libgfortran/configure	2017-07-07 21:52:52.102027045 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/libiberty/configure gcc-4.1.0/libiberty/configure
+--- gcc-4.1.0.org/libiberty/configure	2005-07-22 06:14:38.000000000 +0300
++++ gcc-4.1.0/libiberty/configure	2017-07-07 21:53:40.766986776 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/libjava/classpath/configure gcc-4.1.0/libjava/classpath/configure
+--- gcc-4.1.0.org/libjava/classpath/configure	2005-12-01 22:09:06.000000000 +0200
++++ gcc-4.1.0/libjava/classpath/configure	2017-07-07 21:52:45.555027826 +0300
+@@ -186,11 +186,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/libjava/configure gcc-4.1.0/libjava/configure
+--- gcc-4.1.0.org/libjava/configure	2006-02-28 10:39:11.000000000 +0200
++++ gcc-4.1.0/libjava/configure	2017-07-07 21:52:33.348029281 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/libjava/libltdl/configure gcc-4.1.0/libjava/libltdl/configure
+--- gcc-4.1.0.org/libjava/libltdl/configure	2004-11-24 23:01:02.000000000 +0200
++++ gcc-4.1.0/libjava/libltdl/configure	2017-07-07 21:52:21.641030676 +0300
+@@ -186,11 +186,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/libmudflap/configure gcc-4.1.0/libmudflap/configure
+--- gcc-4.1.0.org/libmudflap/configure	2005-10-05 02:54:38.000000000 +0300
++++ gcc-4.1.0/libmudflap/configure	2017-07-07 21:53:24.566986776 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/libobjc/configure gcc-4.1.0/libobjc/configure
+--- gcc-4.1.0.org/libobjc/configure	2006-02-28 10:39:11.000000000 +0200
++++ gcc-4.1.0/libobjc/configure	2017-07-07 21:52:13.680031625 +0300
+@@ -183,12 +183,17 @@ done
+   exit
+ }
+ 
+-
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/libssp/configure gcc-4.1.0/libssp/configure
+--- gcc-4.1.0.org/libssp/configure	2006-02-28 02:29:00.000000000 +0200
++++ gcc-4.1.0/libssp/configure	2017-07-07 21:53:54.591986776 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/libstdc++-v3/configure gcc-4.1.0/libstdc++-v3/configure
+--- gcc-4.1.0.org/libstdc++-v3/configure	2006-01-20 00:55:55.000000000 +0200
++++ gcc-4.1.0/libstdc++-v3/configure	2017-07-07 21:54:04.177986776 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
+diff -urNp gcc-4.1.0.org/zlib/configure gcc-4.1.0/zlib/configure
+--- gcc-4.1.0.org/zlib/configure	2005-09-12 20:02:07.000000000 +0300
++++ gcc-4.1.0/zlib/configure	2017-07-07 21:54:16.148011750 +0300
+@@ -184,11 +184,17 @@ done
+ }
+ 
+ 
+-case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
+-  *c*,-n*) ECHO_N= ECHO_C='
+-' ECHO_T='	' ;;
+-  *c*,*  ) ECHO_N=-n ECHO_C= ECHO_T= ;;
+-  *)       ECHO_N= ECHO_C='\c' ECHO_T= ;;
++ECHO_C= ECHO_N= ECHO_T=
++case `echo -n x` in #(((((
++-n*)
++  case `echo 'xy\c'` in
++  *c*) ECHO_T=' ';;     # ECHO_T is single tab character.
++  xy)  ECHO_C='\c';;
++  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
++       ECHO_T=' ';;
++  esac;;
++*)
++  ECHO_N='-n';;
+ esac
+ 
+ if expr a : '\(a\)' >/dev/null 2>&1; then
