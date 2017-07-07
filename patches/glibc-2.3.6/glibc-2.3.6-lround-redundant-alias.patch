@@ -1,0 +1,11 @@
+--- glibc-2.3.6/sysdeps/powerpc/powerpc32/fpu/s_lround.S	2017-07-07 20:05:47.949338025 +0300
++++ glibc-2.3.6/sysdeps/powerpc/powerpc32/fpu/s_lround.S	2017-07-07 20:09:04.842924886 +0300
+@@ -88,7 +88,7 @@ ENTRY (__lround)
+ 	b	.L9
+ 	END (__lround)
+ 
+-strong_alias (__lround, __lround)
++/* strong_alias (__lround, __lround) */
+ weak_alias (__lround, lround)
+ 
+ strong_alias (__lround, __lroundf)

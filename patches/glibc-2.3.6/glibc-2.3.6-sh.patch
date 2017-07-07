@@ -1,0 +1,11 @@
+--- glibc-2.3.6/csu/Makefile	2005-02-16 11:34:09.000000000 +0200
++++ glibc-2.3.6/csu/Makefile	2017-07-18 22:39:03.892393762 +0300
+@@ -241,7 +241,7 @@ $(objpfx)version-info.h: $(common-objpfx
+ 	 esac; \
+ 	 files="$(all-Banner-files)";				\
+ 	 if test -n "$$files"; then				\
+-	   echo "\"Available extensions:\\n\"";			\
++	   printf "\"Available extensions:\\\\n\"\n";		\
+ 	   sed -e '/^#/d' -e 's/^[[:space:]]*/	/'		\
+ 	       -e 's/^\(.*\)$$/\"\1\\n\"/' $$files;		\
+ 	 fi) > $@T

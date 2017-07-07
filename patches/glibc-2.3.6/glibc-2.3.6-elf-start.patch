@@ -1,0 +1,11 @@
+--- glibc-2.3.6/elf/Makefile	2017-07-07 19:38:49.943744448 +0300
++++ glibc-2.3.6/elf/Makefile	2017-07-07 19:39:00.733743162 +0300
+@@ -285,7 +285,7 @@ $(objpfx)ld.so: $(objpfx)librtld.os $(ld
+ 		  $(LDFLAGS-rtld) -Wl,-z,defs -Wl,--verbose 2>&1 |	\
+ 		  LC_ALL=C \
+ 		  sed -e '/^=========/,/^=========/!d;/^=========/d'	\
+-		      -e 's/\. = 0 + SIZEOF_HEADERS;/& _begin = . - SIZEOF_HEADERS;/' \
++		      -e 's/\. = .* + SIZEOF_HEADERS;/& _begin = . - SIZEOF_HEADERS;/' \
+ 		  > $@.lds
+ 	$(LINK.o) -nostdlib -nostartfiles -shared -o $@			\
+ 		  $(LDFLAGS-rtld) -Wl,-z,defs $(z-now-$(bind-now))	\
