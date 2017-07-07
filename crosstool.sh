@@ -200,10 +200,12 @@ fi
 # to decide that since build==host, they could run host binaries.
 #
 # if host is cygwin and this is not a canadian build, modify GCC_HOST
+if false; then
 case "$GCC_HOST,$CANADIAN_BUILD," in
 *cygwin*,?*,) ;;
 *)            GCC_HOST=`echo $GCC_HOST | sed s/-/-host_/` ;;
 esac
+fi
 
 
 # If we're building compilers that run on Windows, remember that their
