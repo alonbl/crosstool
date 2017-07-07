@@ -267,6 +267,7 @@ if test "${CYGWIN_DIR}" = ""; then
   esac
   # Fetch linux-libc-headers, if requested
   test -n "${LINUX_SANITIZED_HEADER_DIR}" && getUnpackAndPatch \
+	ftp://ftp.be.debian.org/pub/tools/crosstool/files/old/src/${LINUX_SANITIZED_HEADER_DIR}.tar.bz2 \
 	http://ep09.pld-linux.org/~mmazur/linux-libc-headers/${LINUX_SANITIZED_HEADER_DIR}.tar.bz2 \
 	ftp://ftp.lfs-matrix.net/pub/linux-libc-headers/${LINUX_SANITIZED_HEADER_DIR}.tar.bz2
   # Glibc addons must come after glibc
